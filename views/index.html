@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>csvdiffr</title>
+    <meta name="description" content="csvdiffr - a csv diff util">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        csvdiffr
+      </h1>
+    </header>
+
+    <main>      
+      <p class="bold">with two .csv files, get the rows from <b>file B</b> where the value from the first column matches those in <b>file A</b></p>
+      
+      <p>you can upload two files: the first (file A) is the short (and possibly outdated) list of products that you created. the second file (file B) is the larger price sheet with all the products and possibly new prices. this script will collect all the values from the first column in file A and then go through all the rows in file B and check if the value in the first column is the same as a value from the first column in file A; and if they are the same, will return the row. so you will end up with the rows in file B that have the same value in the first column (the assumption is that's the UNF identifier, so any two files you upload you need to make sure the value in the first column can match).</p>
+
+      <p class="bold">\ ゜ o ゜)ノ</p>
+
+      <form action="/test" method="post" enctype="multipart/form-data">
+        <label for="filea">file A</label>
+        <input id="filea" type="file" name="filea" accept=".csv" />
+
+        <label for="fileb">file B</label>
+        <input id="fileb" type="file" name="fileb" accept=".csv" />
+        
+        <button type="submit" id="submit-dream">submit</button>
+      </form>
+
+    </main>
+
+    <footer>
+      <a href="https://github.com/edwardsharp/csvdiffr">made with 🖤 in NYC</a>
+    </footer>
+
+  </body>
+</html>
