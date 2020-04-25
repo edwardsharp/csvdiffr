@@ -16,6 +16,8 @@ see a working demo of this over on glitch!
 
 ### docker notez
 
+see [3dwardsharp/csvdiffr](https://hub.docker.com/r/3dwardsharp/csvdiffr/) on docker HUB.
+
 ```
 docker build -t 3dwardsharp/csvdiffr .
 docker run -p 3000:3000 --env PORT=3000 3dwardsharp/csvdiffr
